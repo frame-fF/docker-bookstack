@@ -5,7 +5,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Asia/Bangkok
+      - TZ=Europe/London
       - APP_URL=https://bookstack.softsystem.dev
       - APP_KEY=${APP_KEY}
       - DB_HOST=mariadb
