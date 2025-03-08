@@ -1,0 +1,27 @@
+services:
+  bookstack:
+    image: lscr.io/linuxserver/bookstack
+    container_name: bookstack
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - APP_URL=https://bookstack.softsystem.dev
+      - DB_HOST=mariadb
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASS=password
+      - DB_DATABASE=bookstack
+    volumes:
+      - data:/config
+    ports:
+      - 6875:80
+    restart: unless-stopped
+
+volumes:
+  data:
+
+networks:
+  default:
+    external: true
+    name: base
