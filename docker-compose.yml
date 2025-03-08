@@ -6,7 +6,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Bangkok
-      - APP_URL=https://bookstack.softsystem.dev
+      - APP_URL=http://127.0.0.1:6875
       - APP_KEY=${APP_KEY}
       - DB_HOST=mariadb
       - DB_PORT=3306
